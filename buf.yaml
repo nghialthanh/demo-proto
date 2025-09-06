@@ -1,0 +1,11 @@
+# For details on buf.yaml configuration, visit https://buf.build/docs/configuration/v2/buf-yaml
+version: v2
+deps: []
+lint:
+  use:
+    - DEFAULT
+  except:
+    - RPC_NO_CLIENT_STREAMING
+breaking:
+  use:
+    - FILE

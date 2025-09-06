@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package todo.v1;
+
+option go_package = "proto/auth/auth;pb";
+
+service TodoService {
+  rpc CreateTodo(CreateTodoRequest) returns (CreateTodoResponse);
+}
+
+message CreateTodoRequest {
+  string title = 1;
+  string description = 2;
+}
+
+message CreateTodoResponse {
+  int64 id = 1;
+  string title = 2;
+}
