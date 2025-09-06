@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package todo.v1;
+
+option go_package = "proto/auth/cs-agent;pb";
+
+service CsAgentService {
+  rpc CreateAgent(CreateAgentRequest) returns (CreateAgentResponse);
+}
+
+message CreateAgentRequest {
+  string name = 1;
+  string cid = 2;
+}
+
+message CreateAgentResponse {
+  int64 cid = 1;
+  string name = 2;
+}
